@@ -24,6 +24,14 @@ jobs:
       - name: Setup Export Directory
         run: mkdir -v -p build/web
 
+      - name: Download Export Templates
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates/4.2.2.stable
+          curl -sSL https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2.2-stable_export_templates.tpz -o templates.tpz
+          unzip -q templates.tpz
+          mv templates/* ~/.local/share/godot/export_templates/4.2.2.stable/
+          rm -rf templates templates.tpz
+
       - name: Export Game
         run: godot --headless --path MySimpleGame --export-release "Web" ../build/web/index.html
 
