@@ -37,8 +37,4 @@ jobs:
         with:
           name: godot-web-build
           path: build/web
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: godot-web-build
-          path: build/web
+          overwrite: true
