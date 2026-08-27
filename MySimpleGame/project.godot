@@ -1,0 +1,13 @@
+; Engine configuration file.
+
+[application]
+
+config/name="My Simple Text Game"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.png"
+
+[display]
+
+window/size/viewport_width=1152
+window/size/viewport_height=648
