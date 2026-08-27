@@ -25,7 +25,7 @@ jobs:
         run: mkdir -v -p build/web
 
       - name: Export Game
-        run: godot --headless --export-release "Web" build/web/index.html
+        run: godot --headless --path MySimpleGame --export-release "Web" ../build/web/index.html
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
